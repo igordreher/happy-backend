@@ -1,8 +1,11 @@
 import express from 'express';
 
-const app = express();
+import './database/connection'
 
-app.get('/', (req, res) => {
+const app = express();
+app.use(express.json())
+
+app.post('/', (req, res) => {
     return res.json({message: "Hello World"})
 })
 
