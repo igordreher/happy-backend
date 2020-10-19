@@ -1,10 +1,11 @@
 import Image from '../models/Image'
+import localHost from '../../../localhost'
 
 export default {
     render(image: Image) {
         return {
             id: image.id,
-            url: `http://192.168.0.9:3333/uploads/${image.path}`
+            url: `http://${localHost}:3333/uploads/${image.path}`
         }
     },
     renderMany(images: Image[]){
